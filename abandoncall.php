@@ -1,8 +1,20 @@
 <?PHP
-date_default_timezone_set('Asia/Bangkok');
-$startDate = date('Y-m-d');
-$time = date('h:m:s');
-$endDate = date('Y-m-d');
+function timeInput($dateStart,$dateFinal)
+{
+	date_default_timezone_set('Asia/Bangkok');
+	$date1 = $dateStart;
+	$date2 = $dateFinal;
+	if($date1 == $date2){
+		return $date1;
+	}
+	else{
+		return array($date1,$date2);
+	}
+}
+
+// $startDate = date('Y-m-d');
+// $time = date('h:m:s');
+// $endDate = date('Y-m-d');
 include "dbconnection.php";
 echo "Today = $date "."and time = $time <br>";
 /* SELECT DB to query */
