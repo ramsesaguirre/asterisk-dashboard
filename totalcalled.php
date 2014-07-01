@@ -40,7 +40,7 @@ while ($rowstart = mysql_fetch_assoc($query) and $rowend = mysql_fetch_assoc($qu
 	if ($rowstart['linkedid']==$rowend['linkedid'])
 	{
 		$tmp[$count] = timeDifferent($rowstart['eventtime'],$rowend['eventtime']);
-		echo "Telephone number : ".$rowstart['cid_num'].'<br>'."Call duration : ";
+		echo "Telephone number : ".$rowstart['cid_num']." call time : ".substr($rowstart['eventtime'], 10).'<br>'."Call duration : ";
 		echo gmdate("i:s",$tmp[$count])." Minute".'</br>';
 		$sumVar += $tmp[$count++];
 	}
