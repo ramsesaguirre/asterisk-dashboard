@@ -6,7 +6,7 @@ define('DB_PASSWORD', 'abc1234');
 define('DB_SERVER', 'localhost');
 define('DB_DATABASE', 'log');
 
-$extensions = array("1111", "2222","3333");
+$extensions = array("1111");
 
 $conn = mysql_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD) or die("Can't connect to database");
 mysql_select_db(DB_DATABASE) or die("Can't select database");
