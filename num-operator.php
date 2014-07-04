@@ -33,7 +33,7 @@ function findByDate($time,$condition){
 		echo $row['operator_id'];
 	}
 }
-$serv_time = $tmpTime = date('Y-m-d h:m:s');
+$serv_time = $tmpTime = date('Y-m-d h:i:s');
 foreach ($operator_name as $operator) {
 	$exec = shell_exec("/usr/sbin/asterisk -rx 'queue show {$operator_number}' | grep {$operator}");
 	// echo $exec;
