@@ -28,7 +28,7 @@ while ($rowstart = mysql_fetch_assoc($query) )
 	   	  if ($o1> $rowstart['date'])
 	     	{
 		
-				echo "operator : ".$rowstart['operator_id']." status: On  Time:".$rowstart['date'].'<br>';
+				echo "operator : ".$rowstart['operator_id']." status: ".$rowstart['status']." Time:".$rowstart['date'].'<br>';
 		
 	     	}
 	   		 $o1='1000-07-03 11:14:31';
@@ -38,7 +38,7 @@ while ($rowstart = mysql_fetch_assoc($query) )
      	   if ($o2> $rowstart['date'])
 	    	 {
 		
-				echo "operator : ".$rowstart['operator_id']." status: On  Time:".$rowstart['date'].'<br>';
+				echo "operator : ".$rowstart['operator_id']." status: ".$rowstart['status']." Time:".$rowstart['date'].'<br>';
 		
 	    	 }
 	 		$o2='1000-07-03 11:14:31';
@@ -49,7 +49,7 @@ while ($rowstart = mysql_fetch_assoc($query) )
      	   if ($o3> $rowstart['date'])
 	    	 {
 		
-				echo "operator : ".$rowstart['operator_id']." status: On  Time:".$rowstart['date'].'<br>';
+				echo "operator : ".$rowstart['operator_id']." status: ".$rowstart['status']." Time:".$rowstart['date'].'<br>';
 		
 	    	 }
 	 		$o3='1000-07-03 11:14:31';
