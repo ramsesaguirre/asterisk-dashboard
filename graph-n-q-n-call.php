@@ -3,7 +3,7 @@
 
 	date_default_timezone_set('Asia/Bangkok');
 	
-
+//http://jsfiddle.net/jKdD2/
 
 
 include "dbconnection2log.php";
