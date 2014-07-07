@@ -10,7 +10,7 @@ include "dbconnection2log.php";
 
 
 
-$sqlCMD = "SELECT `date`,`operator_id`,`status` FROM `log_operator` order by `date` desc" ;
+$sqlCMD = "SELECT `date`,`operator_id`,`status` FROM `log_operator` order by `date`, `operator_id` desc" ;
 $query = mysql_query($sqlCMD);
 $countRows = mysql_num_rows($query);
 
