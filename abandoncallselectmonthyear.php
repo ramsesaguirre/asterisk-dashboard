@@ -1,6 +1,6 @@
 <?PHP
 date_default_timezone_set('Asia/Bangkok');
-
+session_start();
 
 //check condition to connect mysql (if $date1 and $date 2 are same, sql could be find only $date1)
 include "dbconnection.php";
@@ -47,10 +47,10 @@ $row['m']=0;
 		
            $countrow++;
         
-//
-		
-           
-      
+// 
+		  $_SESSION['abandon','avgday']=$avgs;
+          $_SESSION['abandon','datetimeavg']=$callDate;
+
 	}while($row = mysql_fetch_assoc($querydate));
          
                      echo 'this'.$compare.'have number Abandon Call = '.$countrow.' Call(s)'.'<br>';
@@ -70,7 +70,9 @@ $querymonth = mysql_query($sqlmonth);
 		$callmonth = $row2['cmonth'];
 		$avg = $row2['avgs'];
 		echo ' month is : '.$callmonth.'year : '.$callyear." time to waiting called(average) ".$avg.'</br>';
-         
+         $_SESSION['abandon','avgmonth']=$avg;
+          $_SESSION['abandon','monthtime']=$callmonth;
+           $_SESSION['abandon','monthtime','yeartime']=$callmonth;
 	}
 
 
