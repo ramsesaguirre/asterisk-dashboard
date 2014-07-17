@@ -8,7 +8,7 @@ function timeDifferent($firstTimeInput,$lastTimeInput)
 }
 include "dbconnection.php";
 
-$sql = " SELECT * FROM `cel` WHERE `eventtype` = 'ANSWER' and `appname` = 'answer' or `eventtype` = 'bridge_start' and `appname` = 'dial' order by `linkedid`, `eventtype` ";
+$sql = " SELECT * FROM `cel` WHERE (`eventtime` like '$date"."%' ) and((`eventtype` = 'ANSWER' and `appname` = 'answer') or (`eventtype` = 'bridge_start' and `appname` = 'dial')) order by `linkedid`, `eventtype` ";
 
 $query = mysql_query($sql);
 $row1=null;
